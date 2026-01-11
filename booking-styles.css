@@ -305,8 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .calendar-day.selected {
-    background: linear-gradient(135deg, #FF6B35, #a04f16);
-    color: white;
+    background: linear-gradient(135deg, #fbf4f1, #f7cdb0);
+    color: rgb(225, 98, 18);
     border-color: #FF6B35;
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
@@ -373,8 +373,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .time-slot.selected {
-    background: linear-gradient(135deg, #FF6B35, #16a085);
-    color: white;
+    background: linear-gradient(135deg, #fbf4f1, #f7cdb0);
+    color: rgb(225, 98, 18);
     border-color: #FF6B35;
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
     transform: scale(1.05);
@@ -856,4 +856,5 @@ h1, h2, h3, h4, h5, h6 {
     footer p {
         font-size: 0.8rem;
     }
+
 }
