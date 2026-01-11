@@ -389,27 +389,53 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .modern-calendar-section {
+        margin-bottom: 25px;
+    }
+
     .calendar-wrapper {
-        padding: 20px;
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+
+    .calendar-header {
+        margin-bottom: 18px;
+        padding: 0;
     }
 
     .calendar-header h3 {
-        font-size: 1.2rem;
-        min-width: 150px;
+        font-size: 1.1rem;
+        min-width: 100px;
     }
 
     .calendar-nav {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    .calendar-day {
+        width: 32px;
+        height: 32px;
         font-size: 0.9rem;
+        border-radius: 8px;
     }
 
     .weekday {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        padding: 8px 0;
+    }
+
+    .calendar-days {
+        gap: 6px;
+    }
+
+    .calendar-day {
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    .time-slots-modern {
+        margin-bottom: 20px;
+    }
+
+    .time-slots-modern label {
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
 
     .time-slots-grid {
@@ -418,8 +444,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .time-slot {
-        padding: 12px;
-        font-size: 0.9rem;
+        padding: 12px 8px;
+        font-size: 0.85rem;
+        border-radius: 8px;
     }
 }
 
@@ -813,13 +840,25 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* ===== SERVICE CARDS - BOOKING STEP ===== */
+    .service-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin-bottom: 12px;
+    }
+
     .service-card-booking-step {
-        padding: 12px !important;
-        margin-bottom: 10px;
+        padding: 15px !important;
+        margin-bottom: 12px;
+    }
+
+    .service-info {
+        width: 100%;
+        margin-bottom: 12px;
     }
 
     .service-card-booking-step h5 {
-        font-size: 0.95rem;
+        font-size: 1rem;
         margin-bottom: 6px;
     }
 
@@ -829,11 +868,28 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .service-meta {
-        gap: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
-    .service-duration, .service-price {
-        font-size: 0.85rem;
+    .service-duration {
+        font-size: 0.8rem;
+    }
+
+    .service-price {
+        font-size: 1.2rem;
+    }
+
+    .service-check {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        margin-left: 0;
+        align-self: flex-end;
     }
 
     /* ===== ALERTS ===== */

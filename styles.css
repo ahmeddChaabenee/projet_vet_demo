@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-card-modern:hover .service-icon-modern {
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    /* color: white; */
     transform: scale(1.1) rotateY(10deg);
 }
 
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card-modern:hover .service-link a {
-    color: white;
+    /* color: white; */
     transform: translateX(5px);
 }
 
@@ -357,7 +357,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .why-choose-section {
     padding: 80px 0;
-    background: white;
+    background: rgb(254, 212, 189);
 }
 
 .advantage-card {
