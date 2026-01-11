@@ -167,64 +167,38 @@
                 <h2>Notre Cabinet</h2>
                 <p>Découvrez nos installations modernes et nos animaux heureux soignés avec amour.</p>
             </div>
-            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="gallery-item">
-                            <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de consultation" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Salle de Consultation Moderne</p>
-                            </div>
-                        </div>
+            <div class="stacked-carousel" id="stackedCarousel">
+                <div class="stacked-carousel-container">
+                    <div class="stacked-item active">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de consultation">
+                        <div class="gallery-overlay"><p>Salle de Consultation Moderne</p></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="gallery-item">
-                            <img src="images/salle.jpg" alt="Animal soigné" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Patient Satisfait</p>
-                            </div>
-                        </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Animal soigné">
+                        <div class="gallery-overlay"><p>Patient Satisfait</p></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/600x400/e0f7f3/1a472a?text=Équipe" alt="Notre équipe" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Notre Équipe Dévouée</p>
-                            </div>
-                        </div>
+                    <div class="stacked-item">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Notre équipe">
+                        <div class="gallery-overlay"><p>Notre Équipe Dévouée</p></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/600x400/f0fdf4/1a472a?text=Accueil" alt="Accueil" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Accueil Chaleureux</p>
-                            </div>
-                        </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Accueil">
+                        <div class="gallery-overlay"><p>Accueil Chaleureux</p></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/600x400/e0f7f3/1a472a?text=Salle+Soins" alt="Salle de soins" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Salle de Soins</p>
-                            </div>
-                        </div>
+                    <div class="stacked-item">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de soins">
+                        <div class="gallery-overlay"><p>Salle de Soins</p></div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="gallery-item">
-                            <img src="https://via.placeholder.com/600x400/f0fdf4/1a472a?text=Récupération" alt="Zone de récupération" class="d-block w-100">
-                            <div class="gallery-overlay">
-                                <p>Zone de Récupération</p>
-                            </div>
-                        </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Zone de récupération">
+                        <div class="gallery-overlay"><p>Zone de Récupération</p></div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" onclick="stackedCarouselPrev()">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Précédent</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" onclick="stackedCarouselNext()">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Suivant</span>
                 </button>
             </div>
         </div>
@@ -434,6 +408,48 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Stacked Carousel Functionality
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.stacked-item');
+        const totalItems = items.length;
+        let autoRotateInterval;
+
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev');
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
+                    item.classList.add('prev');
+                }
+            });
+        }
+
+        function stackedCarouselNext() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+            resetAutoRotate();
+        }
+
+        function stackedCarouselPrev() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+            resetAutoRotate();
+        }
+
+        function autoRotate() {
+            stackedCarouselNext();
+        }
+
+        function resetAutoRotate() {
+            clearInterval(autoRotateInterval);
+            autoRotateInterval = setInterval(autoRotate, 4000);
+        }
+
+        // Initialize carousel
+        updateCarousel();
+        autoRotateInterval = setInterval(autoRotate, 4000);
+
         // FAQ Toggle Functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
