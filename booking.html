@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - VétiCare Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="booking-styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🐾 VétiCare Pro</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <!-- Progress Bar -->
+        <div class="progress-bar-custom">
+            <div id="step1-indicator" class="progress-step active">
+                <div class="step-number">1</div>
+                <div class="step-label">Service</div>
+            </div>
+            <div id="step2-indicator" class="progress-step">
+                <div class="step-number">2</div>
+                <div class="step-label">Date & Heure</div>
+            </div>
+            <div id="step3-indicator" class="progress-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Informations</div>
+            </div>
+            <div id="step4-indicator" class="progress-step">
+                <div class="step-number">4</div>
+                <div class="step-label">Confirmation</div>
+            </div>
+        </div>
+
+        <!-- Booking Container -->
+        <div class="booking-container">
+            <!-- Step 1: Service Selection -->
+            <div id="step1" class="step active">
+                <h2 class="step-title">Choisissez un Service</h2>
+                
+                <div class="service-card" data-service="Consultation Générale" data-duration="30 min" data-price="50€">
+                    <div class="service-info">
+                        <h5>Consultation Générale</h5>
+                        <p>Examen de santé complet et diagnostic professionnel</p>
+                    </div>
+                    <div class="service-meta">
+                        <div class="service-duration">30 min</div>
+                        <div class="service-price">50€</div>
+                    </div>
+                    <div class="service-check"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="service-card" data-service="Vaccination" data-duration="15 min" data-price="30€">
+                    <div class="service-info">
+                        <h5>Vaccination</h5>
+                        <p>Protection complète contre les maladies courantes</p>
+                    </div>
+                    <div class="service-meta">
+                        <div class="service-duration">15 min</div>
+                        <div class="service-price">30€</div>
+                    </div>
+                    <div class="service-check"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="service-card" data-service="Grooming" data-duration="45 min" data-price="60€">
+                    <div class="service-info">
+                        <h5>Grooming & Toilettage</h5>
+                        <p>Toilettage professionnel avec soin et attention</p>
+                    </div>
+                    <div class="service-meta">
+                        <div class="service-duration">45 min</div>
+                        <div class="service-price">60€</div>
+                    </div>
+                    <div class="service-check"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="service-card" data-service="Chirurgie" data-duration="60 min" data-price="150€">
+                    <div class="service-info">
+                        <h5>Intervention Chirurgicale</h5>
+                        <p>Interventions avec équipes expertes et équipement moderne</p>
+                    </div>
+                    <div class="service-meta">
+                        <div class="service-duration">60 min</div>
+                        <div class="service-price">150€</div>
+                    </div>
+                    <div class="service-check"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="service-card" data-service="Soins Dentaires" data-duration="40 min" data-price="55€">
+                    <div class="service-info">
+                        <h5>Soins Dentaires</h5>
+                        <p>Nettoyage professionnel et traitement dentaire</p>
+                    </div>
+                    <div class="service-meta">
+                        <div class="service-duration">40 min</div>
+                        <div class="service-price">55€</div>
+                    </div>
+                    <div class="service-check"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="button-group">
+                    <button id="next1" class="btn-primary" disabled>Suivant</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Date & Time -->
+            <div id="step2" class="step">
+                <h2 class="step-title">Sélectionnez Date & Heure</h2>
+                
+                <div class="modern-calendar-section">
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <button id="prev-month" class="calendar-nav">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <h3 id="current-month"></h3>
+                            <button id="next-month" class="calendar-nav">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="weekdays">
+                            <div class="weekday">Lun</div>
+                            <div class="weekday">Mar</div>
+                            <div class="weekday">Mer</div>
+                            <div class="weekday">Jeu</div>
+                            <div class="weekday">Ven</div>
+                            <div class="weekday">Sam</div>
+                            <div class="weekday">Dim</div>
+                        </div>
+                        <div id="calendar-days" class="calendar-days">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-slots-modern">
+                    <label>Heures Disponibles</label>
+                    <div class="time-slots-grid" id="time-slots">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="prev2" class="btn-secondary">Précédent</button>
+                    <button id="next2" class="btn-primary" disabled>Suivant</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Client Information -->
+            <div id="step3" class="step">
+                <h2 class="step-title">Vos Informations</h2>
+                
+                <form id="client-form">
+                    <div class="form-group">
+                        <label for="name">Nom Complet</label>
+                        <input type="text" id="name" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numéro de Téléphone</label>
+                        <input type="tel" id="phone" placeholder="+33 1 23 45 67 89" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pet">Nom de l'Animal</label>
+                        <input type="text" id="pet" placeholder="Minou, Rex, Etc..." required>
+                    </div>
+                </form>
+
+                <div class="button-group">
+                    <button id="prev3" class="btn-secondary">Précédent</button>
+                    <button id="next3" class="btn-primary">Confirmer la Réservation</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Confirmation -->
+            <div id="step4" class="step">
+                <div class="confirmation-box">
+                    <div class="success-icon">✓</div>
+                    <h2>Réservation Confirmée !</h2>
+                    <p>Votre rendez-vous a été enregistré avec succès.</p>
+                    
+                    <div class="summary-box">
+                        <div class="summary-item">
+                            <span class="summary-label">Service</span>
+                            <span class="summary-value" id="summary-service">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Date</span>
+                            <span class="summary-value" id="summary-date">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Heure</span>
+                            <span class="summary-value" id="summary-time">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Durée</span>
+                            <span class="summary-value" id="summary-duration">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Tarif</span>
+                            <span class="summary-value" id="summary-price">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Client</span>
+                            <span class="summary-value" id="summary-client">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Animal</span>
+                            <span class="summary-value" id="summary-pet">-</span>
+                        </div>
+                    </div>
+
+                    <p style="color: #666; font-size: 0.95rem; margin-top: 20px;">Un email de confirmation a été envoyé. Vous recevrez un rappel 24h avant votre rendez-vous.</p>
+                    <div class="button-group">
+                        <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block;">Retour à l'Accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let selectedService = null;
+        let selectedDate = null;
+        let selectedTime = null;
+        let clientInfo = {};
+        let currentMonth = new Date();
+
+        // ===== Step 1: Service Selection =====
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.service-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                selectedService = {
+                    name: card.dataset.service,
+                    duration: card.dataset.duration,
+                    price: card.dataset.price
+                };
+                document.getElementById('next1').disabled = false;
+            });
+        });
+
+        document.getElementById('next1').addEventListener('click', () => {
+            showStep(2);
+            renderCalendar();
+        });
+
+        // ===== Step 2: Modern Calendar =====
+        function renderCalendar() {
+            const year = currentMonth.getFullYear();
+            const month = currentMonth.getMonth();
+            
+            // Update month/year display
+            const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+                              'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+            document.getElementById('current-month').textContent = `${monthNames[month]} ${year}`;
+            
+            // Get first day of month and number of days
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const daysInPrevMonth = new Date(year, month, 0).getDate();
+            
+            const calendarDays = document.getElementById('calendar-days');
+            calendarDays.innerHTML = '';
+            
+            // Previous month days
+            for (let i = firstDay - 1; i > 0; i--) {
+                const day = document.createElement('div');
+                day.className = 'calendar-day empty';
+                calendarDays.appendChild(day);
+            }
+            
+            // Current month days
+            const today = new Date();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayEl = document.createElement('div');
+                const date = new Date(year, month, day);
+                const isToday = date.toDateString() === today.toDateString();
+                const isPast = date < today;
+                
+                dayEl.className = 'calendar-day';
+                if (isPast) dayEl.classList.add('disabled');
+                if (isToday) dayEl.classList.add('today');
+                
+                dayEl.textContent = day;
+                
+                if (!isPast) {
+                    dayEl.classList.add('available');
+                    dayEl.addEventListener('click', () => selectDate(date, dayEl));
+                }
+                
+                calendarDays.appendChild(dayEl);
+            }
+            
+            // Next month days
+            const totalCells = calendarDays.children.length;
+            const remainingCells = 42 - totalCells;
+            for (let day = 1; day <= remainingCells; day++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'calendar-day empty';
+                calendarDays.appendChild(dayEl);
+            }
+        }
+
+        function selectDate(date, element) {
+            document.querySelectorAll('.calendar-day.selected').forEach(d => d.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedDate = date.toISOString().split('T')[0];
+            populateTimeSlots();
+        }
+
+        function populateTimeSlots() {
+            const slots = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00'];
+            const container = document.getElementById('time-slots');
+            container.innerHTML = '';
+            slots.forEach(slot => {
+                const div = document.createElement('div');
+                div.className = 'time-slot available';
+                div.textContent = slot;
+                div.addEventListener('click', () => selectTime(slot, div));
+                container.appendChild(div);
+            });
+        }
+
+        function selectTime(time, element) {
+            document.querySelectorAll('.time-slot').forEach(ts => ts.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedTime = time;
+            document.getElementById('next2').disabled = false;
+        }
+
+        document.getElementById('prev-month').addEventListener('click', () => {
+            currentMonth.setMonth(currentMonth.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.getElementById('next-month').addEventListener('click', () => {
+            currentMonth.setMonth(currentMonth.getMonth() + 1);
+            renderCalendar();
+        });
+
+        document.getElementById('prev2').addEventListener('click', () => showStep(1));
+        document.getElementById('next2').addEventListener('click', () => showStep(3));
+
+        // ===== Step 3: Client Info =====
+        document.getElementById('prev3').addEventListener('click', () => showStep(2));
+        document.getElementById('next3').addEventListener('click', () => {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const pet = document.getElementById('pet').value.trim();
+            
+            if (name && phone && pet) {
+                clientInfo = { name, phone, pet };
+                showStep(4);
+                showSummary();
+            } else {
+                alert('Veuillez remplir tous les champs.');
+            }
+        });
+
+        function showSummary() {
+            document.getElementById('summary-service').textContent = selectedService.name;
+            document.getElementById('summary-date').textContent = new Date(selectedDate).toLocaleDateString('fr-FR');
+            document.getElementById('summary-time').textContent = selectedTime;
+            document.getElementById('summary-duration').textContent = selectedService.duration;
+            document.getElementById('summary-price').textContent = selectedService.price;
+            document.getElementById('summary-client').textContent = clientInfo.name;
+            document.getElementById('summary-pet').textContent = clientInfo.pet;
+        }
+
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            
+            // Show current step
+            document.getElementById(`step${step}`).classList.add('active');
+            
+            // Update progress indicators
+            for (let i = 1; i <= 4; i++) {
+                const indicator = document.getElementById(`step${i}-indicator`);
+                indicator.classList.remove('active', 'completed');
+                if (i === step) {
+                    indicator.classList.add('active');
+                } else if (i < step) {
+                    indicator.classList.add('completed');
+                }
+            }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
