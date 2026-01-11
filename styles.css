@@ -880,6 +880,22 @@ footer p {
         padding: 40px 0;
     }
 
+    .carousel {
+        max-height: 350px;
+    }
+
+    .carousel-item {
+        max-height: 350px;
+    }
+
+    .carousel-item .gallery-item {
+        max-height: 350px;
+    }
+
+    .carousel-item .gallery-item img {
+        max-height: 350px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 10px;
@@ -1045,27 +1061,34 @@ footer p {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(255, 107, 53, 0.15);
+    max-height: 500px;
 }
 
 .carousel-item {
     height: auto;
     background-color: #f8f9fa;
+    max-height: 500px;
 }
 
 .carousel-item .gallery-item {
     position: relative;
     margin: 0;
     border-radius: 0;
+    max-height: 500px;
+    max-width: 500px;
 }
 
 .carousel-item .gallery-item img {
     border-radius: 0;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .carousel-control-prev, .carousel-control-next {
     background-color: rgba(255, 107, 53, 0.3);
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
