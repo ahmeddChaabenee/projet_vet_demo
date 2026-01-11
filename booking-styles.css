@@ -9,14 +9,14 @@
 
 body {
     font-family: 'Sora', sans-serif;
-    background: linear-gradient(135deg, #f0fdf4 0%, #e0f7f3 100%);
+    background: linear-gradient(135deg, #FEFCFA 0%, #F5F1E8 100%);
     color: #2c3e50;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: #1a472a;
+    color: #2F2F2F;
 }
 
 /* ============================================
@@ -31,8 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1a472a !important;
+    color: #2F2F2F !important;
     font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* ============================================
@@ -52,12 +58,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .progress-step.active .step-number {
-    background: #27ae60;
+    background: #FF6B35;
     color: white;
 }
 
 .progress-step.completed .step-number {
-    background: #27ae60;
+    background: #FF6B35;
     color: white;
 }
 
@@ -82,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress-step.active .step-label,
 .progress-step.completed .step-label {
-    color: #27ae60;
+    color: #FF6B35;
 }
 
 /* ============================================
@@ -133,14 +139,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card:hover {
-    border-color: #27ae60;
-    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.2);
+    border-color: #FF6B35;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.2);
 }
 
 .service-card.selected {
-    border-color: #27ae60;
-    background: #f0fdf4;
-    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+    border-color: #FF6B35;
+    background: #FEFCFA;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
 }
 
 .service-info {
@@ -172,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-price {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #27ae60;
+    color: #FF6B35;
 }
 
 .service-check {
@@ -188,8 +194,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card.selected .service-check {
-    border-color: #27ae60;
-    background: #27ae60;
+    border-color: #FF6B35;
+    background: #FF6B35;
     color: white;
 }
 
@@ -219,14 +225,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .calendar-header h3 {
     font-size: 1.5rem;
-    color: #1a472a;
+    color: #2F2F2F;
     margin: 0;
     min-width: 200px;
     text-align: center;
 }
 
 .calendar-nav {
-    background: #f0fdf4;
+    background: #FEFCFA;
     border: none;
     width: 40px;
     height: 40px;
@@ -235,13 +241,13 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #27ae60;
+    color: #FF6B35;
     font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
 .calendar-nav:hover {
-    background: #27ae60;
+    background: #FF6B35;
     color: white;
     transform: scale(1.1);
 }
@@ -282,9 +288,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .calendar-day:not(.empty):not(.disabled):hover {
-    background: #e0f7f3;
+    background: #F5F1E8;
     transform: scale(1.1);
-    border-color: #27ae60;
+    border-color: #FF6B35;
 }
 
 .calendar-day.empty {
@@ -299,14 +305,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .calendar-day.selected {
-    background: linear-gradient(135deg, #27ae60, #16a085);
+    background: linear-gradient(135deg, #FF6B35, #a04f16);
     color: white;
-    border-color: #27ae60;
-    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    border-color: #FF6B35;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .calendar-day.today {
-    border-color: #27ae60;
+    border-color: #FF6B35;
     font-weight: 700;
 }
 
@@ -321,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 20px;
     display: block;
-    color: #1a472a;
+    color: #2F2F2F;
     font-size: 1.1rem;
 }
 
@@ -356,10 +362,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .time-slot.available:hover {
-    border-color: #27ae60;
-    background: #f0fdf4;
+    border-color: #FF6B35;
+    background: #FEFCFA;
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
 }
 
 .time-slot.available:hover::before {
@@ -367,10 +373,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .time-slot.selected {
-    background: linear-gradient(135deg, #27ae60, #16a085);
+    background: linear-gradient(135deg, #FF6B35, #16a085);
     color: white;
-    border-color: #27ae60;
-    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+    border-color: #FF6B35;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
     transform: scale(1.05);
 }
 
@@ -428,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
-    color: #1a472a;
+    color: #2F2F2F;
 }
 
 .form-group input {
@@ -443,8 +449,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-group input:focus {
     outline: none;
-    border-color: #27ae60;
-    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+    border-color: #FF6B35;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
 /* ============================================
@@ -458,7 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: #27ae60;
+    background: #FF6B35;
     border: none;
     color: white;
     padding: 15px 40px;
@@ -466,13 +472,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 30px;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .btn-primary:hover:not(:disabled) {
     background: #229954;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
 .btn-primary:disabled {
@@ -482,8 +488,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
     background: white;
-    border: 2px solid #27ae60;
-    color: #27ae60;
+    border: 2px solid #FF6B35;
+    color: #FF6B35;
     padding: 13px 38px;
     font-weight: 600;
     border-radius: 30px;
@@ -492,7 +498,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background: #27ae60;
+    background: #FF6B35;
     color: white;
 }
 
@@ -500,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
    CONFIRMATION SCREEN
    ============================================ */
 .confirmation-box {
-    background: linear-gradient(135deg, #f0fdf4 0%, #e0f7f3 100%);
+    background: linear-gradient(135deg, #FEFCFA 0%, #F5F1E8 100%);
     border-radius: 20px;
     padding: 60px;
     text-align: center;
@@ -509,7 +515,7 @@ h1, h2, h3, h4, h5, h6 {
 .success-icon {
     width: 80px;
     height: 80px;
-    background: #27ae60;
+    background: #FF6B35;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -557,11 +563,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .summary-label {
     font-weight: 600;
-    color: #1a472a;
+    color: #2F2F2F;
 }
 
 .summary-value {
-    color: #27ae60;
+    color: #FF6B35;
     font-weight: 600;
 }
 
@@ -585,6 +591,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .navbar-brand {
         font-size: 1.1rem;
+    }
+
+    .navbar-brand img {
+        height: 40px;
     }
 
     .nav-link {
