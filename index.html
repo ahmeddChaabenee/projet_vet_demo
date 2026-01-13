@@ -75,16 +75,17 @@
                 <p>Une gamme complète de soins vétérinaires pour la santé et le bien-être de votre animal.</p>
             </div>
             <div class="services-grid-innovative">
-                <div class="service-card-modern">
+                <div class="service-card-modern card-medical">
                     <div class="service-card-inner">
                         <div class="service-icon-modern"><i class="fas fa-heartbeat"></i></div>
+                        
                         <h5>Soins Médicaux</h5>
                         <p>Consultations, diagnostics, vaccinations et traitements médicaux complets pour maintenir la santé de votre compagnon à travers toutes les étapes de sa vie.</p>
                         <div class="service-link"><a href="booking.html">Prendre rendez-vous <i class="fas fa-arrow-right"></i></a></div>
                     </div>
                     <div class="service-card-bg"></div>
                 </div>
-                <div class="service-card-modern">
+                <div class="service-card-modern card-toilettage">
                     <div class="service-card-inner">
                         <div class="service-icon-modern"><i class="fas fa-spa"></i></div>
                         <h5>Toilettage & Bien-être</h5>
@@ -93,7 +94,7 @@
                     </div>
                     <div class="service-card-bg"></div>
                 </div>
-                <div class="service-card-modern">
+                <div class="service-card-modern card-pension">
                     <div class="service-card-inner">
                         <div class="service-icon-modern"><i class="fas fa-home"></i></div>
                         <h5>Pension & Hébergement</h5>
@@ -106,7 +107,53 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Cabinet</h2>
+                <p>Découvrez nos installations modernes et nos animaux heureux soignés avec amour.</p>
+            </div>
+            <div class="stacked-carousel" id="stackedCarousel">
+                <div class="stacked-carousel-container">
+                    <div class="stacked-item active">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de consultation">
+                        <div class="gallery-overlay"><p>Salle de Consultation Moderne</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/acceille.jpg" alt="Animal soigné">
+                        <div class="gallery-overlay"><p>Patient Satisfait</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/chambre.jpg" alt="Notre équipe">
+                        <div class="gallery-overlay"><p>Notre Équipe Dévouée</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Accueil">
+                        <div class="gallery-overlay"><p>Accueil Chaleureux</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de soins">
+                        <div class="gallery-overlay"><p>Salle de Soins</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Zone de récupération">
+                        <div class="gallery-overlay"><p>Zone de Récupération</p></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="stackedCarouselPrev()">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" onclick="stackedCarouselNext()">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Why Choose Us Section -->
     <section class="why-choose-section">
         <div class="container">
             <div class="section-header">
@@ -133,6 +180,7 @@
                         <div class="advantage-icon"><i class="fas fa-microscope"></i></div>
                         <h5>Équipements Modernes</h5>
                         <p>Technologie dernier cri pour diagnostic rapide et traitement optimal.</p>
+                        <br>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 mb-4">
@@ -160,50 +208,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Notre Cabinet</h2>
-                <p>Découvrez nos installations modernes et nos animaux heureux soignés avec amour.</p>
-            </div>
-            <div class="stacked-carousel" id="stackedCarousel">
-                <div class="stacked-carousel-container">
-                    <div class="stacked-item active">
-                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de consultation">
-                        <div class="gallery-overlay"><p>Salle de Consultation Moderne</p></div>
-                    </div>
-                    <div class="stacked-item">
-                        <img src="images/salle.jpg" alt="Animal soigné">
-                        <div class="gallery-overlay"><p>Patient Satisfait</p></div>
-                    </div>
-                    <div class="stacked-item">
-                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Notre équipe">
-                        <div class="gallery-overlay"><p>Notre Équipe Dévouée</p></div>
-                    </div>
-                    <div class="stacked-item">
-                        <img src="images/salle.jpg" alt="Accueil">
-                        <div class="gallery-overlay"><p>Accueil Chaleureux</p></div>
-                    </div>
-                    <div class="stacked-item">
-                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de soins">
-                        <div class="gallery-overlay"><p>Salle de Soins</p></div>
-                    </div>
-                    <div class="stacked-item">
-                        <img src="images/salle.jpg" alt="Zone de récupération">
-                        <div class="gallery-overlay"><p>Zone de Récupération</p></div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" onclick="stackedCarouselPrev()">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" onclick="stackedCarouselNext()">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
@@ -214,10 +218,10 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">M.D</div>
+                        <div class="testimonial-avatar">B.K</div>
                         <div class="testimonial-info">
-                            <h5>Marie Dupont</h5>
-                            <p>Propriétaire de Max (Chat)</p>
+                            <h5>Bejaoui Khouloud</h5>
+                            <p>Propriétaire de Chat</p>
                         </div>
                     </div>
                     <div class="stars">
@@ -227,13 +231,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Très satisfaite ! Le personnel est adorable et les soins sont vraiment efficaces. Max se sent mieux et plus heureux. Je recommande vivement !"</p>
+                    <p class="testimonial-text">"Merci infiniment à la Dr Asma pour son écoute, sa patience et son amour sincère pour les animaux. Elle a pris soin de mon chat avec beaucoup de douceur et de compétence"</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">J.B</div>
+                        <div class="testimonial-avatar">C.E</div>
                         <div class="testimonial-info">
-                            <h5>Jean Bernard</h5>
+                            <h5>Cherni Eya</h5>
                             <p>Propriétaire de Bella (Chien)</p>
                         </div>
                     </div>
@@ -244,13 +248,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Excellente clinique ! Les vétérinaires sont compétents et l'accueil est chaleureux. Bella adore ses visites et c'est déjà un bon signe !"</p>
+                    <p class="testimonial-text">"Elle a sauvé ma tortue elle avait un problème pour pondre ses œufs, alors aucun autre clinique n’acceptait de la soigner. Son amour et son dévouement pour tous les animaux la rendent vraiment unique.!"</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">S.M</div>
+                        <div class="testimonial-avatar">M.R</div>
                         <div class="testimonial-info">
-                            <h5>Sophie Martin</h5>
+                            <h5>Maram Riahi</h5>
                             <p>Propriétaire de Léo et Luna</p>
                         </div>
                     </div>
@@ -261,7 +265,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Service impeccable et tarifs justes. L'équipe prend du temps pour rassurer les animaux anxieux. Bravo pour cette belle clinique !"</p>
+                    <p class="testimonial-text">"Je tiens à dire à quel point j’aime cette vétérinaire ! ❤️
+Elle est d’une gentillesse et d’un professionnalisme incroyables. Elle aime sincèrement tous les animaux, ça se voit dans tout ce qu’elle fait"</p>
                 </div>
             </div>
         </div>
@@ -405,15 +410,15 @@
             <i class="fas fa-exclamation"></i>
         </button>
         <div class="fab-menu" id="fabMenu">
-            <a href="tel:+33123456789" class="fab-btn fab-phone" title="Appeler">
+            <a href="tel:22024232" class="fab-btn fab-phone" title="Appeler">
                 <i class="fas fa-phone"></i>
                 <span>Appeler</span>
             </a>
-            <a href="https://wa.me/33123456789" target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp">
+            <a href="https://wa.me/22024232" target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <a href="https://maps.google.com/?q=clinique+veterinaire+paris" target="_blank" class="fab-btn fab-directions" title="Directions">
+            <a href="https://maps.app.goo.gl/hFRfyB6JxQLx7Ypk6" target="_blank" class="fab-btn fab-directions" title="Directions">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Directions</span>
             </a>
@@ -424,7 +429,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 VétiCare Pro - Soins Vétérinaires Professionnels. Tous droits réservés.</p>
+            <p>&copy; 2025 Animaux D'abord - Soins Vétérinaires Professionnels. Tous droits réservés.</p>
         </div>
     </footer>
 
