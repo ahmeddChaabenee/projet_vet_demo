@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinique Vétérinaire - Soins Expertisés Pour Vos Animaux</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Processus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Soins Experts Pour Chaque Patte et Moustache</h1>
+            <p>Où chaque animal est chéri comme un membre de la famille. Soins compassés et fiables pour la santé et le bonheur de vos animaux de compagnie.</p>
+            <a href="booking.html" class="btn btn-primary">Prendre un rendez-vous</a>
+            <a href="#services" class="btn btn-secondary">Nos Services</a>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 trust-stat">
+                    <h4>2400+</h4>
+                    <p>Animaux Heureux</p>
+                </div>
+                <div class="col-md-3 col-6 trust-stat">
+                    <h4>15+</h4>
+                    <p>Années d'Expérience</p>
+                </div>
+                <div class="col-md-3 col-6 trust-stat">
+                    <h4>98%</h4>
+                    <p>Satisfaction Client</p>
+                </div>
+                <div class="col-md-3 col-6 trust-stat">
+                    <h4>24/7</h4>
+                    <p>Support Disponible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Services Principaux</h2>
+                <p>Une gamme complète de soins vétérinaires pour la santé et le bien-être de votre animal.</p>
+            </div>
+            <div class="services-grid-innovative">
+                <div class="service-card-modern card-medical">
+                    <div class="service-card-inner">
+                        <div class="service-icon-modern"><i class="fas fa-heartbeat"></i></div>
+                        
+                        <h5>Soins Médicaux</h5>
+                        <p>Consultations, diagnostics, vaccinations et traitements médicaux complets pour maintenir la santé de votre compagnon à travers toutes les étapes de sa vie.</p>
+                        <div class="service-link"><a href="booking.html">Prendre rendez-vous <i class="fas fa-arrow-right"></i></a></div>
+                    </div>
+                    <div class="service-card-bg"></div>
+                </div>
+                <div class="service-card-modern card-toilettage">
+                    <div class="service-card-inner">
+                        <div class="service-icon-modern"><i class="fas fa-spa"></i></div>
+                        <h5>Toilettage & Bien-être</h5>
+                        <p>Grooming professionnel, soins de beauté, et traitements de bien-être pour garder votre animal propre, confortable et magnifique au quotidien.</p>
+                        <div class="service-link"><a href="booking.html">Prendre rendez-vous <i class="fas fa-arrow-right"></i></a></div>
+                    </div>
+                    <div class="service-card-bg"></div>
+                </div>
+                <div class="service-card-modern card-pension">
+                    <div class="service-card-inner">
+                        <div class="service-icon-modern"><i class="fas fa-home"></i></div>
+                        <h5>Pension & Hébergement</h5>
+                        <p>Environnement sécurisé et chaleureux avec soins personnalisés, surveillance 24/7 et activités enrichissantes pour votre animal durant vos absences.</p>
+                        <div class="service-link"><a href="booking.html">Prendre rendez-vous <i class="fas fa-arrow-right"></i></a></div>
+                    </div>
+                    <div class="service-card-bg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Cabinet</h2>
+                <p>Découvrez nos installations modernes et nos animaux heureux soignés avec amour.</p>
+            </div>
+            <div class="stacked-carousel" id="stackedCarousel">
+                <div class="stacked-carousel-container">
+                    <div class="stacked-item active">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de consultation">
+                        <div class="gallery-overlay"><p>Notre Équipe Dévouée</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/acceille.jpg" alt="Animal soigné">
+                        <div class="gallery-overlay"><p>Accueil Chaleureux</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/chambre.jpg" alt="Notre équipe">
+                        <div class="gallery-overlay"><p>Salle de Soins</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Accueil">
+                        <div class="gallery-overlay"><p>Salle de Consultation Moderne</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/91f762eb504601d505087f7a01a11359.jpg" alt="Salle de soins">
+                        <div class="gallery-overlay"><p>Salle de Soins</p></div>
+                    </div>
+                    <div class="stacked-item">
+                        <img src="images/salle.jpg" alt="Zone de récupération">
+                        <div class="gallery-overlay"><p>Zone de Récupération</p></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="stackedCarouselPrev()">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" onclick="stackedCarouselNext()">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pourquoi Nous Choisir</h2>
+                <p>Découvrez les avantages d'une clinique vétérinaire fiable et professionnelle.</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-certificate"></i></div>
+                        <h5>Professionnels Certifiés</h5>
+                        <p>Vétérinaires diplômés et expérimentés avec expertise reconnue dans les soins animaliers.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-heart"></i></div>
+                        <h5>Soins Personnalisés</h5>
+                        <p>Chaque animal reçoit un traitement adapté à ses besoins spécifiques et sa condition.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-microscope"></i></div>
+                        <h5>Équipements Modernes</h5>
+                        <p>Technologie dernier cri pour diagnostic rapide et traitement optimal.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-phone"></i></div>
+                        <h5>Urgences & Conseils Rapides</h5>
+                        <p>Support disponible 24/7 pour les cas d'urgence et questions pressantes.</p>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h5>Approche Douce</h5>
+                        <p>Techniques bienveillantes pour minimiser l'anxiété des animaux nerveux.</p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-star"></i></div>
+                        <h5>Satisfaction Garantie</h5>
+                        <p>Engagement envers votre satisfaction et le bien-être de votre animal à 100%.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Témoignages de Nos Clients</h2>
+                <p>Découvrez ce que nos clients satisfaits pensent de notre service.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">B.K</div>
+                        <div class="testimonial-info">
+                            <h5>Bejaoui Khouloud</h5>
+                            <p>Propriétaire de Chat</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Merci infiniment à la Dr Asma pour son écoute, sa patience et son amour sincère pour les animaux. Elle a pris soin de mon chat avec beaucoup de douceur et de compétence"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">C.E</div>
+                        <div class="testimonial-info">
+                            <h5>Cherni Eya</h5>
+                            <p>Propriétaire de Bella (Chien)</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Elle a sauvé ma tortue elle avait un problème pour pondre ses œufs, alors aucun autre clinique n’acceptait de la soigner. Son amour et son dévouement pour tous les animaux la rendent vraiment unique.!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M.R</div>
+                        <div class="testimonial-info">
+                            <h5>Maram Riahi</h5>
+                            <p>Propriétaire de Léo et Luna</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Je tiens à dire à quel point j’aime cette vétérinaire ! ❤️
+Elle est d’une gentillesse et d’un professionnalisme incroyables. Elle aime sincèrement tous les animaux, ça se voit dans tout ce qu’elle fait"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Prêt à Offrir le Meilleur à Votre Animal ?</h2>
+            <p>Rejoignez notre communauté de propriétaires heureux et réservez dès aujourd'hui.</p>
+            <a href="booking.html" class="btn btn-light-cta">Réserver un Rendez-vous</a>
+        </div>
+    </section>
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Processus Simplifié et Fiable</h2>
+                <p>Trois étapes simples pour assurer les meilleurs soins à votre animal.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="process-item">
+                        <div class="process-number">1</div>
+                        <h4>Choisissez un Service</h4>
+                        <p>Parcourez nos services adaptés et sélectionnez le meilleur pour votre compagnon.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-item">
+                        <div class="process-number">2</div>
+                        <h4>Sélectionnez Date & Heure</h4>
+                        <p>Réservez facilement un créneau qui s'adapte parfaitement à votre emploi du temps.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-item">
+                        <div class="process-number">3</div>
+                        <h4>Confirmez et Relaxez</h4>
+                        <p>Tarifs transparents et confirmation instantanée. Laissez notre équipe soigner votre animal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions Fréquentes</h2>
+                <p>Trouvez réponse aux questions que vous vous posez.</p>
+            </div>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment prendre un rendez-vous ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Vous pouvez prendre rendez-vous directement via notre plateforme en ligne en cliquant sur le bouton "Prendre un rendez-vous". Choisissez le service, la date et l'heure qui vous convient, puis remplissez vos informations de contact.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quelle est votre politique d'annulation ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Les annulations peuvent être effectuées jusqu'à 24 heures avant le rendez-vous sans frais. Les annulations effectuées moins de 24 heures avant seront facturées à 50% du service réservé.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>La vaccination est-elle obligatoire ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        La vaccination est vivement recommandée pour protéger votre animal contre les maladies graves. Nos vétérinaires vous conseilleront sur le calendrier vaccinal approprié en fonction de l'âge et du mode de vie de votre animal.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Proposez-vous un service d'urgence ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui ! Nous proposons un service d'urgence 24/7. En cas d'urgence, appelez-nous directement au +216 22 024 232 et notre équipe vous guidera vers la meilleure solution.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quels sont vos horaires d'ouverture ?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Nous sommes ouverts du lundi au vendredi de 9h à 18h, le samedi de 9h à 13h. Les urgences sont traitées 24/7. Contactez-nous pour plus d'informations sur les horaires spécifiques.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contactez-nous</h2>
+                <p>Nous sommes là pour répondre à vos questions.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5>Adresse</h5>
+                        <p>123 Rue des Animaux<br>tunisie</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h5>Téléphone</h5>
+                        <p><a href="tel:22024232" style="color: #FF6B35; text-decoration: none;">+216 22 024 232</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h5>Email</h5>
+                        <p><a href="mailto:contact@animaux.com" style="color: #FF6B35; text-decoration: none;">contact@animaux.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button (FAB) - Contact Rapide -->
+    <div class="fab-container">
+        <button class="fab-main" id="fabMain">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <a href="tel:22024232" class="fab-btn fab-phone" title="Appeler">
+                <i class="fas fa-phone"></i>
+                <span>Appeler</span>
+            </a>
+            <a href="https://wa.me/22024232" target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://maps.app.goo.gl/hFRfyB6JxQLx7Ypk6" target="_blank" class="fab-btn fab-directions" title="Directions">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Directions</span>
+            </a>
+        </div>
+        <div class="fab-overlay" id="fabOverlay"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Animaux D'abord - Soins Vétérinaires Professionnels. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Stacked Carousel Functionality
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.stacked-item');
+  const totalItems = items.length;
+  let autoRotateInterval;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.remove('active', 'prev');
+      if (index === currentIndex) {
+        item.classList.add('active');
+      } else if (index === (currentIndex - 1 + totalItems) % totalItems) {
+        item.classList.add('prev');
+      }
+    });
+  }
+
+  function stackedCarouselNext() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+    resetAutoRotate();
+  }
+
+  function stackedCarouselPrev() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+    resetAutoRotate();
+  }
+
+  function autoRotate() {
+    stackedCarouselNext();
+  }
+
+  function resetAutoRotate() {
+    clearInterval(autoRotateInterval);
+    autoRotateInterval = setInterval(autoRotate, 4000);
+  }
+
+  // Initialize carousel
+  if (totalItems > 0) {
+    updateCarousel();
+    autoRotateInterval = setInterval(autoRotate, 4000);
+    // expose functions for html buttons
+    window.stackedCarouselNext = stackedCarouselNext;
+    window.stackedCarouselPrev = stackedCarouselPrev;
+  }
+
+  // FAQ Toggle Functionality
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.closest('.faq-item');
+      const isActive = faqItem.classList.contains('active');
+
+      // Close all open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Toggle current item
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scroll for anchor links (only for hash links)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Floating Action Button (FAB) Functionality
+  const fabMain = document.getElementById('fabMain');
+  const fabMenu = document.getElementById('fabMenu');
+  const fabOverlay = document.getElementById('fabOverlay');
+  let isFabOpen = false;
+
+  function openFab() {
+    isFabOpen = true;
+    fabMenu.classList.add('open');
+    fabOverlay.classList.add('open');
+    fabMain.classList.add('open');
+  }
+
+  function closeFab() {
+    isFabOpen = false;
+    fabMenu.classList.remove('open');
+    fabOverlay.classList.remove('open');
+    fabMain.classList.remove('open');
+  }
+
+  function toggleFab() {
+    if (isFabOpen) closeFab();
+    else openFab();
+  }
+
+  if (fabMain) fabMain.addEventListener('click', toggleFab);
+  if (fabOverlay) fabOverlay.addEventListener('click', closeFab);
+
+  // Ensure FAB action buttons perform navigation reliably (tel:, external, maps, etc.)
+  document.querySelectorAll('.fab-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const href = btn.getAttribute('href');
+    //   const target = btn.getAttribute('target');
+
+      // N'empêchez PAS la navigation par défaut pour les liens tel: et mailto:
+      if (href && (href.startsWith('tel:') || href.startsWith('mailto:'))) {
+        // Laisser le navigateur gérer naturellement
+        closeFab();
+        return;
+      }
+
+      // Pour les autres liens, prévenez et naviguez manuellement
+      e.preventDefault();
+
+         if (btn.target === '_blank') {
+      window.open(href, '_blank', 'noopener');
+    } else {
+      window.location.href = href;
+    }
+
+      // Fermer le menu
+      setTimeout(closeFab, 150);
+    });
+  });
+});
+</script>
+</body>
+</html>
