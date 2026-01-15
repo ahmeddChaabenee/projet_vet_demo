@@ -281,19 +281,96 @@
             margin-right: 8px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            
-            .section {
-                padding: 30px 20px;
-            }
-            
-            .flow-step::after {
-                display: none;
-            }
-        }
+       /* ============================================
+   RESPONSIVE MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Global */
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    /* Headers */
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .section h3 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .section h4 {
+        font-size: 1.1rem;
+    }
+
+    .section p {
+        font-size: 0.95rem;
+    }
+
+    /* Cards grid */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .card ul {
+        padding-left: 18px;
+    }
+
+    .card li {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    /* Price text */
+    .card p[style*="font-size: 1.4em"] {
+        font-size: 1.2em !important;
+    }
+
+    /* Benefit boxes */
+    .benefit-box {
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .benefit-box h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Icons */
+    .icon {
+        font-size: 1.4rem;
+    }
+
+    /* Center texts */
+    .section p[style*="text-align: center"] {
+        font-size: 1.05rem;
+        margin-top: 30px;
+    }
+
+    /* Buttons (if any) */
+    button, .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
     </style>
 </head>
 <body>
